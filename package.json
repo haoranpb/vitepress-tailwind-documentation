@@ -12,12 +12,15 @@
     "serve": "vitepress serve docs"
   },
   "dependencies": {
+    "tailwindcss": "^2.1.2",
     "vitepress": "^0.13.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.9.0",
+    "postcss": "^8.2.13",
     "prettier": "^2.2.1"
   }
 }
