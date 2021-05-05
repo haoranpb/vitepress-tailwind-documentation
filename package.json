@@ -1,0 +1,23 @@
+{
+  "name": "vitepress-tailwind-documentation",
+  "version": "0.0.1",
+  "description": "Tailwind CSS documentation site clone with Vitepress",
+  "repository": "https://github.com/haoranpb/vitepress-tailwind-documentation.git",
+  "author": "Haoran <ludanxer@icloud.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "vitepress": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.2.1"
+  }
+}
