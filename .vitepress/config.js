@@ -1,4 +1,4 @@
 module.exports = {
-  title: 'Hello VitePress',
-  description: 'Just playing around.',
+  title: 'Tailwind Doc Clone',
+  description: 'Tailwind CSS documentation site clone with Vitepress',
 }
