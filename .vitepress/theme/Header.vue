@@ -23,7 +23,7 @@
           href="https://github.com/haoranpb"
           class="text-gray-400 hover:text-gray-500 transition-colors duration-200"
         >
-          <span className="sr-only">Haoranpb on GitHub</span>
+          <span class="sr-only">Haoranpb on GitHub</span>
           <IconGitHub />
         </OutLink>
       </div>
