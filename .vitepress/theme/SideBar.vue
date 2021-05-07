@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-10 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block"
+    class="fixed z-10 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden lg:static"
   >
     <div
       class="h-full overflow-y-auto scrolling-touch lg:block lg:bg-transparent overflow-hidden lg:top-18 bg-white mr-24 lg:mr-0"
