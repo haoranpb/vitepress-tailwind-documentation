@@ -12,6 +12,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "tailwindcss": "^2.1.2",
     "vitepress": "^0.13.2"
   },
