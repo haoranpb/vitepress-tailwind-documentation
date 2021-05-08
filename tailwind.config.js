@@ -1,9 +1,15 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: ['./.vitepress/theme/**/*.vue'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cyan: colors.cyan,
+      },
+    },
   },
   variants: {
     extend: {},

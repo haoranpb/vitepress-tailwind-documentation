@@ -23,12 +23,7 @@
             </h5>
             <ul v-for="pageName in collection" :key="pageName">
               <li>
-                <a
-                  :href="$site.customData.pages[pageName].href"
-                  class="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500"
-                >
-                  <span>{{ $site.customData.pages[pageName].title }}</span>
-                </a>
+                <NavItem :pageName="pageName" />
               </li>
             </ul>
           </li>
@@ -37,3 +32,11 @@
     </div>
   </div>
 </template>
+
+<script>
+import NavItem from './NavItem.vue'
+
+export default {
+  components: { NavItem },
+}
+</script>
