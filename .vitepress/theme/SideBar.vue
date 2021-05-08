@@ -21,11 +21,14 @@
             >
               {{ category }}
             </h5>
-            <ul v-for="page in collection" :key="page">
-              <li
-                class="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500"
-              >
-                {{ page }}
+            <ul v-for="pageName in collection" :key="pageName">
+              <li>
+                <a
+                  :href="$site.customData.pages[pageName].href"
+                  class="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500"
+                >
+                  <span>{{ $site.customData.pages[pageName].title }}</span>
+                </a>
               </li>
             </ul>
           </li>
@@ -34,11 +37,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  mounted() {
-    console.log(this.$site.customData)
-  },
-}
-</script>
