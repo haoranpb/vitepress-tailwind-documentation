@@ -11,6 +11,7 @@
         >
           <Content class="prose" />
         </div>
+        <TableOfContent />
       </div>
     </div>
   </div>
@@ -19,9 +20,10 @@
 <script>
 import Header from './Header.vue'
 import SideBar from './SideBar.vue'
+import TableOfContent from './TableOfContent.vue'
 
 export default {
-  components: { Header, SideBar },
+  components: { Header, SideBar, TableOfContent },
 }
 </script>
 
