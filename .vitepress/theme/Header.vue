@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div
-      class="items-center flex flex-none pl-4 sm:pl-6 xl:pl-8 lg:w-60 xl:w-72"
+      class="items-center flex flex-none pl-4 sm:pl-6 xl:pl-8 lg:w-60 xl:w-72 border-b border-gray-200 lg:border-b-0"
     >
       <a href="/" class="overflow-hidden w-10 md:w-auto text-2xl font-medium">
         <span class="sr-only">Tailwind documentation clone</span>
@@ -10,7 +10,7 @@
     </div>
 
     <div
-      class="flex-auto flex items-center justify-between px-4 sm:px-6 lg:mx-6 lg:px-0 xl:mx-8"
+      class="flex-auto flex items-center justify-between px-4 sm:px-6 lg:mx-6 lg:px-0 xl:mx-8 border-b border-gray-200"
     >
       <SearchBox />
 
@@ -42,6 +42,6 @@ export default {
 
 <style scoped>
 .nav-bar {
-  @apply sticky h-16 z-20 lg:z-30 top-0 w-full max-w-8xl mx-auto bg-white flex-none flex border-b border-gray-200 lg:border-b-0;
+  @apply sticky h-16 z-20 lg:z-30 top-0 w-full max-w-8xl mx-auto bg-white flex-none flex;
 }
 </style>
