@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="w-full mx-auto max-w-7xl lg:flex">
+  <div class="w-full mx-auto max-w-8xl lg:flex">
     <SideBar />
     <div
       class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible overflow-hidden max-h-screen fixed"
@@ -72,5 +72,12 @@ h5:focus .header-anchor,
 h6:hover .header-anchor,
 h6:focus .header-anchor {
   opacity: 1;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
 }
 </style>
