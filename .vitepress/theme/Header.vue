@@ -42,6 +42,6 @@ export default {
 
 <style scoped>
 .nav-bar {
-  @apply sticky h-16 z-10 top-0 w-full max-w-7xl mx-auto bg-white flex-none flex border-b border-gray-200 lg:border-b-0;
+  @apply sticky h-16 z-20 top-0 w-full max-w-7xl mx-auto bg-white flex-none flex border-b border-gray-200 lg:border-b-0;
 }
 </style>
