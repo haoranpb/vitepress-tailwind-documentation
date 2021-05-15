@@ -34,8 +34,10 @@ export default {
   data() {
     return {
       activeHash: null,
-      anchors: null,
     }
+  },
+  props: {
+    anchors: Array,
   },
   mounted() {
     this.initActiveHash()
@@ -43,18 +45,6 @@ export default {
   methods: {
     initActiveHash() {
       this.activeHash = '#' + this.$page.headers[0].slug
-
-      this.anchors = Array.prototype.slice
-        .call(document.querySelectorAll('.header-anchor'))
-        .map((item) => {
-          return { hash: item.hash, offsetTop: item.offsetTop }
-        })
-        .filter((item) => {
-          // Only need the ones exist in TOC
-          return this.$page.headers.some(
-            (header) => '#' + header.slug === item.hash
-          )
-        })
     },
     handleScroll() {
       const y = window.pageYOffset
@@ -73,6 +63,12 @@ export default {
           }
         }
       }
+    },
+  },
+  watch: {
+    $page() {
+      // At this point, the document haven't finished re-render
+      this.initActiveHash()
     },
   },
   created() {

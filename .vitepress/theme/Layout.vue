@@ -6,8 +6,8 @@
       class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible overflow-hidden max-h-screen fixed"
     >
       <div class="w-full flex">
-        <ContentWrapper />
-        <TableOfContent v-if="$page.headers" />
+        <ContentWrapper @contentUpdated="handleContentUpdate" />
+        <TableOfContent v-if="$page.headers" :anchors="anchors" />
       </div>
     </div>
   </div>
@@ -20,7 +20,33 @@ import TableOfContent from './TableOfContent.vue'
 import ContentWrapper from './ContentWrapper.vue'
 
 export default {
+  data() {
+    return {
+      anchors: null,
+    }
+  },
   components: { Header, SideBar, TableOfContent, ContentWrapper },
+  mounted() {
+    this.getAnchors()
+  },
+  methods: {
+    handleContentUpdate() {
+      this.getAnchors()
+    },
+    getAnchors() {
+      this.anchors = Array.prototype.slice
+        .call(document.querySelectorAll('.header-anchor'))
+        .map((item) => {
+          return { hash: item.hash, offsetTop: item.offsetTop }
+        })
+        .filter((item) => {
+          // Only need the ones exist in TOC
+          return this.$page.headers.some(
+            (header) => '#' + header.slug === item.hash
+          )
+        })
+    },
+  },
 }
 </script>
 

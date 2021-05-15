@@ -12,3 +12,11 @@
   </div>
 </template>
 
+<script>
+export default {
+  emits: ['contentUpdated'],
+  updated() {
+    this.$emit('contentUpdated')
+  },
+}
+</script>
