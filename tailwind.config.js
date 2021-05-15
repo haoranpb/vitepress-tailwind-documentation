@@ -12,6 +12,12 @@ module.exports = {
       maxWidth: {
         '8xl': '90rem',
       },
+      maxHeight: (theme) => ({
+        '(screen-16)': `calc(100vh - ${theme('spacing.16')})`,
+      }),
+      height: (theme) => ({
+        '(screen-16)': `calc(100vh - ${theme('spacing.16')})`,
+      }),
     },
   },
   variants: {

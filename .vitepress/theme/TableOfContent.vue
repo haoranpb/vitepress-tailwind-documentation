@@ -1,7 +1,7 @@
 <template>
   <div class="hidden xl:text-sm xl:block flex-none w-64 pl-8 mr-8">
     <div
-      class="flex flex-col justify-between overflow-y-auto sticky pt-10 pb-6 top-16"
+      class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-16) pt-10 pb-6 top-16"
     >
       <div class="mb-8">
         <h5
