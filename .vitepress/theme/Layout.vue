@@ -6,11 +6,7 @@
       class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible overflow-hidden max-h-screen fixed"
     >
       <div class="w-full flex">
-        <div
-          class="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-10 pb-24 lg:pb-16"
-        >
-          <Content class="prose" />
-        </div>
+        <ContentWrapper />
         <TableOfContent v-if="$page.headers" />
       </div>
     </div>
@@ -21,9 +17,10 @@
 import Header from './Header.vue'
 import SideBar from './SideBar.vue'
 import TableOfContent from './TableOfContent.vue'
+import ContentWrapper from './ContentWrapper.vue'
 
 export default {
-  components: { Header, SideBar, TableOfContent },
+  components: { Header, SideBar, TableOfContent, ContentWrapper },
 }
 </script>
 
