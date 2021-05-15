@@ -11,7 +11,7 @@
         >
           <Content class="prose" />
         </div>
-        <TableOfContent />
+        <TableOfContent v-if="$page.headers" />
       </div>
     </div>
   </div>
