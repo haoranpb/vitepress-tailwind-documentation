@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import NavItem from './NavItem.vue'
+import NavItem from './components/NavItem.vue'
 
 export default {
   components: { NavItem },

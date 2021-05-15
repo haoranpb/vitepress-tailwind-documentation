@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import SearchBox from './SearchBox.vue'
-import OutLink from './OutLink.vue'
+import SearchBox from './components/SearchBox.vue'
+import OutLink from './components/OutLink.vue'
 import IconGitHub from './icons/IconGitHub.vue'
-import Logo from './Logo.vue'
+import Logo from './components/Logo.vue'
 
 export default {
   components: { SearchBox, OutLink, IconGitHub, Logo },

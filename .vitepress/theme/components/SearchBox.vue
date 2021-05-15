@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import IconSearch from './icons/IconSearch.vue'
+import IconSearch from '../icons/IconSearch.vue'
 
 export default {
   components: { IconSearch },
