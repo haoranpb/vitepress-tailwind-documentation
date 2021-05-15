@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="sticky h-16 z-10 w-full max-w-7xl mx-auto bg-white flex-none flex border-b border-gray-200 lg:border-b-0"
-  >
+  <div class="nav-bar">
     <div
       class="items-center flex flex-none pl-4 sm:pl-6 xl:pl-8 lg:w-60 xl:w-72"
     >
@@ -41,3 +39,9 @@ export default {
   components: { SearchBox, OutLink, IconGitHub, Logo },
 }
 </script>
+
+<style scoped>
+.nav-bar {
+  @apply sticky h-16 z-10 w-full max-w-7xl mx-auto bg-white flex-none flex border-b border-gray-200 lg:border-b-0;
+}
+</style>

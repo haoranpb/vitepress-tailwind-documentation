@@ -16,7 +16,7 @@
             :class="{ 'ml-4': section.level == 3 }"
           >
             <a
-              :href="section.slug"
+              :href="'#' + section.slug"
               class="block transform transition-colors duration-200 py-2 hover:text-gray-900"
             >
               {{ section.title }}
