@@ -1,9 +1,12 @@
 <template>
   <div
-    class="fixed z-20 inset-0 lg:h-auto flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden lg:static"
+    class="fixed z-20 inset-0 lg:h-auto flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block lg:static"
+    :class="{ hidden: !navOpen }"
+    @click="$emit('update:clostNav')"
   >
     <div
       class="h-full overflow-y-auto lg:block lg:bg-transparent overflow-hidden lg:top-16 lg:h-auto lg:sticky bg-white mr-24 lg:mr-0"
+      @click="(e) => e.stopPropagation()"
     >
       <div
         class="hidden lg:block h-12 pointer-events-none absolute inset-x-0 z-10 bg-gradient-to-b from-white"
@@ -37,6 +40,13 @@
 import NavItem from './components/NavItem.vue'
 
 export default {
+  props: {
+    navOpen: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  emits: ['update:clostNav'],
   components: { NavItem },
 }
 </script>
