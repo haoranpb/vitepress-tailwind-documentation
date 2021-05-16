@@ -7,7 +7,7 @@
     >
       <div class="w-full flex">
         <ContentWrapper @contentUpdated="handleContentUpdate" />
-        <TableOfContent v-if="$page.headers" :anchors="anchors" />
+        <TableOfContent :anchors="anchors" />
       </div>
     </div>
   </div>
