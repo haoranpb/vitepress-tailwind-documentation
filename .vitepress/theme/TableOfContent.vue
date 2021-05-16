@@ -75,7 +75,7 @@ export default {
       this.initActiveHash()
     },
   },
-  created() {
+  mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
   unmounted() {
