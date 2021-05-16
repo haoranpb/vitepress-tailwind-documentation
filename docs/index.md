@@ -1,6 +1,11 @@
-# Simplified Tailwindcss documentation site clone
+---
+title: Getting started with Tailwind CSS
+description: Learn Tailwind the way that best matches your learning style.
+---
 
-Build with [VitePress](https://vitepress.vuejs.org) and [Tailwind CSS](https://tailwindcss.com)
+A simplified Tailwind CSS documentation site clone, built with [VitePress](https://vitepress.vuejs.org) and [Tailwind CSS](https://tailwindcss.com).
+
+---
 
 ## Why?
 
@@ -8,7 +13,7 @@ I love building elegant websites, especially when both design and css are taken 
 
 ## What's missing?
 
-As you can see on the [website](https://vitepress-tailwind-clone.netlify.app), many functionalities and styles are not implemented for simplicity.
+As you can see on the website, many functionalities and styles are not implemented for simplicity.
 
 ## Development
 
@@ -36,7 +41,3 @@ module.exports = {
 ### Configuration
 
 Take a look at [VitePress](https://vitepress.vuejs.org/guide/customization.html)'s documentation might help you further understand the structure.
-
-## License
-
-[MIT](./LICENSE)

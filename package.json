@@ -1,7 +1,7 @@
 {
   "name": "vitepress-tailwind-documentation",
-  "version": "0.0.1",
-  "description": "Tailwind CSS documentation site clone with Vitepress",
+  "version": "1.0.0",
+  "description": "Simplified Tailwindcss documentation site clone",
   "repository": "https://github.com/haoranpb/vitepress-tailwind-documentation.git",
   "author": "Haoran <ludanxer@icloud.com>",
   "license": "MIT",
