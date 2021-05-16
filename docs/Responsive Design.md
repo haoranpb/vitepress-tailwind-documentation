@@ -1,3 +1,0 @@
-# Responsive Design
-
-Responsive Design
