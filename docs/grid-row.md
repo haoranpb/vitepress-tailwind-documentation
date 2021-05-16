@@ -138,6 +138,6 @@ You can control which variants are generated for the grid-row utilities by modif
   }
 ```
 
-Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants/).
+Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants).
 
 ### Disabling

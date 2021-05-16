@@ -134,7 +134,7 @@ Focus utilities can also be combined with responsive utilities by adding the res
 
 By default, Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as gradient color stops.
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your gradient color stop colors using the `theme.gradientColorStops` section of your Tailwind config.
+You can [customize your color palette](/docs/customizing-colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your gradient color stop colors using the `theme.gradientColorStops` section of your Tailwind config.
 
 ```diff-js
   // tailwind.config.js

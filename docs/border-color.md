@@ -110,7 +110,7 @@ Focus utilities can also be combined with responsive utilities by adding the res
 
 By default, Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as border colors.
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, or customize just your border colors using the `theme.borderColor` section.
+You can [customize your color palette](/docs/customizing-colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, or customize just your border colors using the `theme.borderColor` section.
 
 ```diff-js
   // tailwind.config.js

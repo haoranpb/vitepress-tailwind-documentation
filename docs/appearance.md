@@ -16,7 +16,7 @@ export const classes = { plugin }
 
 ## Usage
 
-Use `appearance-none` to reset any browser specific styling on an element. This utility is often used when creating [custom form components](/docs/examples/forms).
+Use `appearance-none` to reset any browser specific styling on an element. This utility is often used when creating custom form components.
 
 ```html indigo
 <template preview>

@@ -158,7 +158,7 @@ module.exports = {
 
 ### Prefix and important preferences
 
-By default, plugin utilities automatically respect the user's [`prefix`](/docs/configuration/#prefix) and [`important`](/docs/configuration/#important) preferences.
+By default, plugin utilities automatically respect the user's [`prefix`](/docs/configuration#prefix) and [`important`](/docs/configuration#important) preferences.
 
 That means that given this Tailwind configuration:
 

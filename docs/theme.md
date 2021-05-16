@@ -101,7 +101,7 @@ module.exports = {
 
 By default, these colors are inherited by all color-related core plugins, like `backgroundColor`, `borderColor`, `textColor`, and others.
 
-To learn more, see the [color customization documentation](/docs/colors).
+To learn more, see the [color customization documentation](/docs/customizing-colors).
 
 ### Spacing
 
