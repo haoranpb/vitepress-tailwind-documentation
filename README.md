@@ -39,4 +39,4 @@ Take a look at [VitePress](https://vitepress.vuejs.org/guide/customization.html)
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](https://github.com/haoranpb/vitepress-tailwind-documentation/blob/main/LICENSE)
