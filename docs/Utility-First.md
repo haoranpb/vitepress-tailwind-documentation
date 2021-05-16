@@ -7,7 +7,7 @@ import { Heading } from '@/components/Heading'
 import { TipGood, TipBad } from '@/components/Tip'
 import { CodeSample } from '@/components/CodeSample'
 
-## <Heading hidden>Overview</Heading>
+## Overview
 
 Traditionally, whenever you need to style something on the web, you write CSS.
 

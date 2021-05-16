@@ -7,7 +7,7 @@ import { Heading } from '@/components/Heading'
 import { TipGood, TipBad } from '@/components/Tip'
 import stats from '@/utils/stats'
 
-## <Heading hidden>Overview</Heading>
+## Overview
 
 <p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p>
 

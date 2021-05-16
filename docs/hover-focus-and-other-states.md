@@ -8,7 +8,7 @@ import { TipCompat } from '@/components/Tip'
 import { DefaultVariantsConfig } from '@/components/DefaultVariantsConfig'
 import { VariantEnabledList } from '@/components/VariantEnabledList'
 
-## <Heading hidden>Overview</Heading>
+## Overview
 
 Similar to how Tailwind handles [responsive design](/docs/responsive-design), styling elements on hover, focus, and more can be accomplished by prefixing utilities with the appropriate state variant.
 
@@ -794,7 +794,3 @@ Learn more about writing variant plugins in the [variant plugin documentation](/
 Due to file-size considerations, Tailwind does not include all variants for all utilities by default.
 
 To configure which variants are enabled for your project, see the [configuring variants documentation](/docs/configuring-variants).
-
-<div>
-  <DefaultVariantsConfig />
-</div>
