@@ -29,10 +29,21 @@
         <span aria-hidden="true" class="ml-2">→</span>
       </a>
     </div>
+
+    <div class="mt-12 border-t border-gray-200 pt-6 text-right">
+      <OutLink
+        class="mt-10 text-sm text-gray-500 hover:text-gray-900"
+        :href="buildEditURL"
+      >
+        Edit this page on GitHub
+      </OutLink>
+    </div>
   </div>
 </template>
 
 <script>
+import OutLink from './components/OutLink.vue'
+
 export default {
   data() {
     return {
@@ -41,6 +52,7 @@ export default {
       nextPage: null,
     }
   },
+  components: { OutLink },
   emits: ['contentUpdated'],
   updated() {
     this.$emit('contentUpdated')
@@ -65,6 +77,11 @@ export default {
 
       this.prevPage = this.$themeConfig.pages[prevPageID]
       this.nextPage = this.$themeConfig.pages[nextPageID]
+    },
+  },
+  computed: {
+    buildEditURL() {
+      return this.$themeConfig.repo + '/edit/main/' + this.$page.relativePath
     },
   },
 }
