@@ -3,9 +3,7 @@ title: Extracting Components
 description: Dealing with duplication and keeping utility-first projects maintainable.
 ---
 
-import { TipGood, TipBad } from '@/components/Tip'
-
-Tailwind encourages a [utility-first](/docs/utility-first) workflow, where designs are initially implemented using only utility classes to avoid premature abstraction.
+Tailwind encourages a [utility-first](https://tailwindcss.com/docs/utility-first) workflow, where designs are initially implemented using only utility classes to avoid premature abstraction.
 
 ```html indigo
 <template preview class="px-6 py-8">
@@ -62,7 +60,7 @@ Keeping a long list of utility classes in sync across many component instances c
 
 It's very rare that all of the information needed to define a UI component can live entirely in CSS — there's almost always some important corresponding HTML structure you need to use as well.
 
-<TipBad>Don't rely on CSS classes to extract complex components</TipBad>
+Don't rely on CSS classes to extract complex components
 
 ```html
 <template preview class="p-8">
@@ -107,7 +105,7 @@ For this reason, it's often better to extract reusable pieces of your UI into _t
 
 By creating a single source of truth for a template, you can keep using utility classes without any of the maintenance burden created by duplicating the same classes in multiple places.
 
-<TipGood>Create a template partial or JavaScript component</TipGood>
+Create a template partial or JavaScript component
 
 ```html
 <!-- In use -->
@@ -228,4 +226,4 @@ module.exports = {
 
 This can be a good choice if you want to publish your Tailwind components as a library or make it easier to share components across multiple projects.
 
-Learn more in the [component plugin documentation](/docs/plugins#adding-components).
+Learn more in the [component plugin documentation](https://tailwindcss.com/docs/plugins).

@@ -7,7 +7,7 @@ description: Intelligent Tailwind CSS tooling for Visual Studio Code.
 
 <img src={require('@/img/intellisense.png').default} alt="" width={1344} height={672} />
 
-- **Autocomplete**. Intelligent suggestions for class names, as well as [CSS functions and directives](/docs/functions-and-directives).
+- **Autocomplete**. Intelligent suggestions for class names, as well as [CSS functions and directives](https://tailwindcss.com/docs/functions-and-directives).
 - **Linting**. Highlights errors and potential bugs in both your CSS and your markup.
 - **Hover Previews**. See the complete CSS for a Tailwind class name by hovering over it.
 - **Syntax Highlighting**. Provides syntax definitions so that Tailwind features are highlighted correctly.

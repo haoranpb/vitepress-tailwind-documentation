@@ -3,8 +3,6 @@ title: Dark Mode
 description: Using Tailwind CSS to style your site in dark mode.
 ---
 
-import { Heading } from '@/components/Heading'
-
 ## Basic usage
 
 Now that dark mode is a first-class feature of many operating systems, it's becoming more and more common to design a dark version of your website to go along with the default design.

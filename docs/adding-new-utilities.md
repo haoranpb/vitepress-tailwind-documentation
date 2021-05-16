@@ -3,8 +3,6 @@ title: Adding New Utilities
 description: Extending Tailwind with your own custom utility classes.
 ---
 
-import { TipGood, TipBad } from '@/components/Tip'
-
 Although Tailwind provides a pretty comprehensive set of utility classes out of the box, you may run into situations where you need to add a few of your own.
 
 Deciding on the best way to extend a framework can be paralyzing, so here are some best practices to help you add your own utilities in the most idiomatic way possible.
@@ -111,7 +109,7 @@ Learn more about dark mode utilities in the [dark mode documentation](/docs/dark
 
 ### Generating state variants
 
-If you'd like to create [state variants](/docs/hover-focus-and-other-states) for your own utilities, wrap your utilities in the `@variants` directive and list the variants you'd like to enable:
+If you'd like to create [state variants](https://tailwindcss.com/docs/hover-focus-and-other-states) for your own utilities, wrap your utilities in the `@variants` directive and list the variants you'd like to enable:
 
 ```css
 @tailwind base;
@@ -156,7 +154,7 @@ State variants are generated in the same order you list them in the `@variants` 
 }
 ```
 
-Learn more about state variants in the [state variants documentation](/docs/hover-focus-and-other-states).
+Learn more about state variants in the [state variants documentation](https://tailwindcss.com/docs/hover-focus-and-other-states).
 
 ---
 
@@ -189,4 +187,4 @@ module.exports = {
 
 This can be a good choice if you want to publish your custom utilities as a library or make it easier to share them across multiple projects.
 
-Learn more in the [utility plugin documentation](/docs/plugins#adding-utilities).
+Learn more in the [utility plugin documentation](https://tailwindcss.com/docs/plugins).

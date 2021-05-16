@@ -3,9 +3,6 @@ title: Responsive Design
 description: Using responsive utility variants to build adaptive user interfaces.
 ---
 
-import { Heading } from '@/components/Heading'
-import { TipGood, TipBad } from '@/components/Tip'
-
 ## Overview
 
 Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.
@@ -81,14 +78,14 @@ What this means is that unprefixed utilities (like `uppercase`) take effect on a
 
 Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the `sm:` prefixed version. Don't think of `sm:` as meaning "on small screens", think of it as "at the small *breakpoint*".
 
-<TipBad>Don't use <code className="text-sm font-bold text-gray-800">sm:</code> to target mobile devices</TipBad>
+Don't use <code className="text-sm font-bold text-gray-800">sm:</code> to target mobile devices
 
 ```html
 <!-- This will only center text on screens 640px and wider, not on small screens -->
 <div class="sm:text-center"></div>
 ```
 
-<TipGood>Use unprefixed utilities to target mobile, and override them at larger breakpoints</TipGood>
+Use unprefixed utilities to target mobile, and override them at larger breakpoints
 
 ```html
 <!-- This will center text on mobile, and left align it on screens 640px and wider -->
@@ -137,4 +134,4 @@ module.exports = {
 }
 ```
 
-Learn more in the [customizing breakpoints documentation](/docs/breakpoints).
+Learn more in the [customizing breakpoints documentation](https://tailwindcss.com/docs/breakpoints).

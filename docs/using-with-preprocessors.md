@@ -3,8 +3,6 @@ title: Using with Preprocessors
 description: A guide to using Tailwind with common CSS preprocessors like Sass, Less, and Stylus.
 ---
 
-import { TipGood, TipBad } from '@/components/Tip'
-
 Since Tailwind is a PostCSS plugin, there's nothing stopping you from using it with Sass, Less, Stylus, or other preprocessors, just like you can with other PostCSS plugins like [Autoprefixer](https://github.com/postcss/autoprefixer).
 
 It's important to note that **you don't need to use a preprocessor with Tailwind** — you typically write very little CSS on a Tailwind project anyways so using a preprocessor just isn't as beneficial as it would be in a project where you write a lot of custom CSS.
@@ -55,7 +53,7 @@ module.exports = {
 
 One important thing to note about `postcss-import` is that it strictly adheres to the CSS spec and disallows `@import` statements anywhere except at the very top of a file.
 
-<TipBad>Won't work, `@import` statements must come first</TipBad>
+Won't work, `@import` statements must come first
 
 ```css
 /* components.css */
@@ -70,7 +68,7 @@ One important thing to note about `postcss-import` is that it strictly adheres t
 
 The easiest solution to this problem is to never mix regular CSS and imports in the same file. Instead, create one main entry-point file for your imports, and keep all of your actual CSS in separate files.
 
-<TipGood>Use separate files for imports and actual CSS</TipGood>
+Use separate files for imports and actual CSS
 
 ```css
 /* components.css */
@@ -94,7 +92,7 @@ The easiest solution to this problem is to never mix regular CSS and imports in 
 
 The place you are most likely to run into this situation is in your main CSS file that includes your `@tailwind` declarations.
 
-<TipBad>Won't work, `@import` statements must come first</TipBad>
+Won't work, `@import` statements must come first
 
 ```css
 @tailwind base;
@@ -111,7 +109,7 @@ You can solve this by creating separate files for each `@tailwind` declaration, 
 
 The `postcss-import` plugin is smart enough to look for files in the `node_modules` folder automatically, so you don't need to provide the entire path — `"tailwindcss/base"` for example is enough.
 
-<TipGood>Import our provided CSS files</TipGood>
+Import our provided CSS files
 
 ```css
 @import "tailwindcss/base";
@@ -226,7 +224,7 @@ The exact instructions will be different depending on which build tool you are u
 
 The most important thing to understand about using Tailwind with a preprocessor is that **preprocessors like Sass, Less, and Stylus run separately, before Tailwind**. This means that you can't feed output from Tailwind's `theme()` function into a Sass color function for example, because the `theme()` function isn't actually evaluated until your Sass has been compiled to CSS and fed into PostCSS.
 
-<TipBad>Won't work, Sass is processed first</TipBad>
+Won't work, Sass is processed first
 
 ```css
 .alert {
@@ -242,7 +240,7 @@ Aside from that, each preprocessor has its own quirk or two when used with Tailw
 
 When using Tailwind with Sass, using `!important` with `@apply` requires you to use interpolation to compile properly.
 
-<TipBad>Won't work, Sass complains about !important</TipBad>
+Won't work, Sass complains about !important
 
 ```css
 .alert {
@@ -250,7 +248,7 @@ When using Tailwind with Sass, using `!important` with `@apply` requires you to 
 }
 ```
 
-<TipGood>Use interpolation as a workaround</TipGood>
+Use interpolation as a workaround
 
 ```css
 .alert {
@@ -262,7 +260,7 @@ When using Tailwind with Sass, using `!important` with `@apply` requires you to 
 
 When using Tailwind with Less, you cannot nest Tailwind's `@screen` directive.
 
-<TipBad>Won't work, Less doesn't realise it's a media query</TipBad>
+Won't work, Less doesn't realise it's a media query
 
 ```css
 .card {
@@ -276,7 +274,7 @@ When using Tailwind with Less, you cannot nest Tailwind's `@screen` directive.
 
 Instead, use a regular media query along with the `theme()` function to reference your screen sizes, or simply don't nest your `@screen` directives.
 
-<TipGood>Use a regular media query and theme()</TipGood>
+Use a regular media query and theme()
 
 ```css
 .card {
@@ -288,7 +286,7 @@ Instead, use a regular media query along with the `theme()` function to referenc
 }
 ```
 
-<TipGood>Use the @screen directive at the top-level</TipGood>
+Use the @screen directive at the top-level
 
 ```css
 .card {
@@ -305,7 +303,7 @@ Instead, use a regular media query along with the `theme()` function to referenc
 
 When using Tailwind with Stylus, you can't use Tailwind's `@apply` feature without wrapping the entire CSS rule in `@css` so that Stylus treats it as literal CSS:
 
-<TipBad>Won't work, Stylus complains about @apply</TipBad>
+Won't work, Stylus complains about @apply
 
 ```css
 .card {
@@ -313,7 +311,7 @@ When using Tailwind with Stylus, you can't use Tailwind's `@apply` feature witho
 }
 ```
 
-<TipGood>Use @css to avoid processing as Stylus</TipGood>
+Use @css to avoid processing as Stylus
 
 ```css
 @css {
@@ -327,7 +325,7 @@ This comes with a significant cost however, which is that **you cannot use any S
 
 Another option is to use the `theme()` function instead of `@apply`, and write out the actual CSS properties in long form:
 
-<TipGood>Use theme() instead of @apply</TipGood>
+Use theme() instead of @apply
 
 ```css
 .card {
@@ -339,7 +337,7 @@ Another option is to use the `theme()` function instead of `@apply`, and write o
 
 In addition to this, Stylus doesn't support nesting the `@screen` directive (just like Less).
 
-<TipBad>Won't work, Stylus doesn't realise it's a media query</TipBad>
+Won't work, Stylus doesn't realise it's a media query
 
 ```css
 .card {
@@ -353,7 +351,7 @@ In addition to this, Stylus doesn't support nesting the `@screen` directive (jus
 
 Instead, use a regular media query along with the `theme()` function to reference your screen sizes, or simply don't nest your `@screen` directives.
 
-<TipGood>Use a regular media query and theme()</TipGood>
+Use a regular media query and theme()
 
 ```css
 .card {
@@ -365,7 +363,7 @@ Instead, use a regular media query along with the `theme()` function to referenc
 }
 ```
 
-<TipGood>Use the @screen directive at the top-level</TipGood>
+Use the @screen directive at the top-level
 
 ```css
 .card {

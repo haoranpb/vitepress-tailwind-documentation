@@ -3,18 +3,9 @@ title: Installation
 description: Learn how to get Tailwind CSS up and running in your project.
 ---
 
-import { Heading } from '@/components/Heading'
-import { List, ListItemBad } from '@/components/List'
-import { IntegrationGuides } from '@/components/IntegrationGuides'
-import Link from 'next/link'
-import stats from '@/utils/stats'
-
-
 ## Integration guides
 
 Installing Tailwind CSS can be a slightly different process depending on what other frameworks/tools you're using, so we've put together a bunch of guides that cover popular setups.
-
-<IntegrationGuides/>
 
 Don't see your favorite tool in the list? We're always working on new guides, but in the mean time you can follow the instructions for [installing Tailwind CSS as a PostCSS plugin](#installing-tailwind-css-as-a-post-css-plugin) instead to get set up in no time.
 
@@ -89,7 +80,7 @@ module.exports = {
 }
 ```
 
-Learn more about configuring Tailwind in the [configuration documentation](/docs/configuration).
+Learn more about configuring Tailwind in the [configuration documentation](https://tailwindcss.com/docs/configuration).
 
 ### Include Tailwind in your CSS
 
@@ -246,7 +237,7 @@ If you'd like to keep your config file in a different location or give it a diff
 npx tailwindcss-cli@latest build ./src/tailwind.css -c ./.config/tailwind.config.js -o ./dist/tailwind.css
 ```
 
-Learn more about configuring Tailwind in the [configuration documentation](/docs/configuration).
+Learn more about configuring Tailwind in the [configuration documentation](https://tailwindcss.com/docs/configuration).
 
 ### Disabling Autoprefixer
 
@@ -272,14 +263,6 @@ This will make sure Tailwind removes any unused CSS for best performance. Read o
 ## Using Tailwind via CDN
 
 Before using the CDN build, please note that many of the features that make Tailwind CSS great are not available without incorporating Tailwind into your build process.
-
-<List>
-  <ListItemBad>You can't customize Tailwind's default theme</ListItemBad>
-  <ListItemBad>You can't use any <a href="/docs/functions-and-directives">directives</a> like <code>@apply</code>, <code>@variants</code>, etc.</ListItemBad>
-  <ListItemBad>You can't enable additional variants like <a href="/docs/hover-focus-and-other-states#group-focus"><code>group-focus</code></a></ListItemBad>
-  <ListItemBad>You can't install third-party plugins</ListItemBad>
-  <ListItemBad>You can't tree-shake unused styles</ListItemBad>
-</List>
 
 To get the most out of Tailwind, you really should [install it as a PostCSS plugin](#installing-tailwind-css-as-a-post-css-plugin).
 

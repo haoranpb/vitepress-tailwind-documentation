@@ -5,7 +5,7 @@ description: Best practices for adding your own global base styles on top of Tai
 
 Base (or global) styles are the styles at the beginning of a stylesheet that set useful defaults for basic HTML elements like `<a>` tags, headings, etc. or apply opinionated resets like the popular [box-sizing reset](https://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
-Tailwind includes a useful set of base styles out of the box that we call [Preflight](/docs/preflight), which is really just [modern-normalize](https://github.com/sindresorhus/modern-normalize) plus a thin layer of additional more opinionated styles.
+Tailwind includes a useful set of base styles out of the box that we call [Preflight](https://tailwindcss.com/docs/preflight), which is really just [modern-normalize](https://github.com/sindresorhus/modern-normalize) plus a thin layer of additional more opinionated styles.
 
 Preflight is a great starting point for most projects, but if you'd ever like to add your own additional base styles, here are some recommendations for doing it idiomatically.
 
@@ -50,7 +50,7 @@ By using the `@layer` directive, Tailwind will automatically move those styles t
 
 Using the `@layer` directive will also instruct Tailwind to consider those styles for purging when purging the `base` layer. Read our [documentation on optimizing for production](/docs/optimizing-for-production) for more details.
 
-It's a good idea to use [@apply](/docs/functions-and-directives#apply) or [theme()](/docs/functions-and-directives#theme) to define these styles to avoid accidentally deviating from your design system.
+It's a good idea to use [@apply](https://tailwindcss.com/docs/functions-and-directives) or [theme()](https://tailwindcss.com/docs/functions-and-directives) to define these styles to avoid accidentally deviating from your design system.
 
 ### @font-face rules
 
@@ -79,7 +79,7 @@ You can use the same approach to add your `@font-face` rules for any custom font
 
 ## Using a plugin
 
-You can also add base styles by [writing a plugin](/docs/plugins#adding-base-styles) and using the `addBase` function:
+You can also add base styles by [writing a plugin](https://tailwindcss.com/docs/plugins) and using the `addBase` function:
 
 ```js
 // tailwind.config.js

@@ -3,10 +3,6 @@ title: Optimizing for Production
 description: Removing unused CSS from your production builds for maximum performance.
 ---
 
-import { Heading } from '@/components/Heading'
-import { TipGood, TipBad } from '@/components/Tip'
-import stats from '@/utils/stats'
-
 ## Overview
 
 <p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p>
@@ -87,13 +83,13 @@ This basically matches any string separated by spaces, quotes or angle brackets,
 
 That means that **it is important to avoid dynamically creating class strings in your templates with string concatenation**, otherwise PurgeCSS won't know to preserve those classes.
 
-<TipBad>Don't use string concatenation to create class names</TipBad>
+Don't use string concatenation to create class names
 
 ```html mt-4
 <div class="**text-{{**  **error**  **?**  '**red**'  **:**  '**green**'  **}}-600**"></div>
 ```
 
-<TipGood>Do dynamically select a complete class name</TipGood>
+Do dynamically select a complete class name
 
 ```html mt-4
 <div class="**{{**  **error**  **?**  '**text-red-600**'  **:**  '**text-green-600**'  **}}**"></div>
@@ -264,7 +260,7 @@ A list of available options can be found in the [PurgeCSS documentation](https:/
 
 ## Alternate approaches
 
-If you can't use PurgeCSS for one reason or another, you can also reduce Tailwind's footprint by removing unused values from [your configuration file](/docs/configuration).
+If you can't use PurgeCSS for one reason or another, you can also reduce Tailwind's footprint by removing unused values from [your configuration file](https://tailwindcss.com/docs/configuration).
 
 The default theme provides a very generous set of colors, breakpoints, sizes, margins, etc. to make sure that when you pull Tailwind down to prototype something, create a CodePen demo, or just try out the workflow, the experience is as enjoyable and fluid as possible.
 
@@ -276,7 +272,7 @@ Here are a few strategies you can use to keep your generated CSS small and perfo
 
 ### Limiting your color palette
 
-The default theme includes a whopping [84 colors](/docs/customizing-colors) used for backgrounds, borders, text, and placeholders, all of which also have `hover:` and `focus:` variants, as well as responsive variants at the six default screen sizes.
+The default theme includes a whopping [84 colors](https://tailwindcss.com/docs/customizing-colors) used for backgrounds, borders, text, and placeholders, all of which also have `hover:` and `focus:` variants, as well as responsive variants at the six default screen sizes.
 
 By default, there are _thousands_ of classes generated to accommodate these colors, and it makes up close to half of the final build size.
 
