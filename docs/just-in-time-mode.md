@@ -4,21 +4,15 @@ shortTitle: Just-in-Time Mode
 description: A faster, more powerful, on-demand engine for Tailwind CSS v2.1+.
 featureVersion: 'v2.1+'
 ---
-import { Heading } from '@/components/Heading'
-import { TipGood, TipBad, TipInfo } from '@/components/Tip'
-import { ThemeReference } from '@/components/ThemeReference'
 
-## <Heading hidden>Overview</Heading>
+## Overview
 
-<TipInfo>
-  <strong className="font-semibold text-blue-900">This feature is currently in preview.</strong> Preview features are not covered by semantic versioning and some details may change as we continue to refine them.
-</TipInfo>
 
 Tailwind CSS v2.1 introduces a new just-in-time compiler for Tailwind CSS that generates your styles on-demand as you author your templates instead of generating everything in advance at initial build time.
 
-<div className="relative pb-[calc(9/16*100%)] my-12">
+<div class="relative pb-[calc(9/16*100%)] my-12">
   <iframe
-    className="absolute inset-0 h-full w-full"
+    class="absolute inset-0 h-full w-full"
     src="https://www.youtube.com/embed/3O_3X7InOw8"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

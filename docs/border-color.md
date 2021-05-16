@@ -8,27 +8,6 @@ features:
   focus: false
 ---
 
-import plugin from 'tailwindcss/lib/plugins/borderColor'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-import { Heading } from '@/components/Heading'
-
-export const classes = {
-  plugin,
-  preview: (css, { className }) => (
-    <td className={`relative w-16 p-2 font-mono text-xs whitespace-pre ${className}`}>
-      <div
-        className="absolute inset-0 m-2 border"
-        style={{
-          borderColor: Array.isArray(css['border-color'])
-            ? css['border-color'][0]
-            : css['border-color'],
-        }}
-      />
-    </td>
-  ),
-}
-
 ## Usage
 
 Control the border color of an element using the `border-{color}` utilities.

@@ -8,27 +8,6 @@ features:
   focus: false
 ---
 
-import plugin from 'tailwindcss/lib/plugins/backgroundColor'
-import { Heading } from '@/components/Heading'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-
-export const classes = {
-  plugin,
-  preview: (css) => (
-    <td
-      className={css['background-color'] === 'transparent' ? 'bg-checkered' : undefined}
-      style={{
-        backgroundColor: Array.isArray(css['background-color'])
-          ? css['background-color'][0]
-          : css['background-color'],
-      }}
-    >
-      <div className="w-24" />
-    </td>
-  ),
-}
-
 ## Usage
 
 Control the background color of an element using the `bg-{color}` utilities.

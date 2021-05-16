@@ -3,29 +3,6 @@ title: "Placeholder Color"
 description: "Utilities for controlling the color of placeholder text."
 ---
 
-import plugin from 'tailwindcss/lib/plugins/placeholderColor'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-import { Heading } from '@/components/Heading'
-
-export const classes = {
-  plugin,
-  transformSelector: (selector) => (
-    <>
-      {selector.split('::')[0].trim().replace(/^\./, '').replace(/\\/g, '')}
-      <span className="text-gray-500">::placeholder</span>
-    </>
-  ),
-  preview: (css, { className }) => (
-    <td
-      className={`text-center font-medium text-base whitespace-nowrap align-middle ${className}`}
-      style={css}
-    >
-      <div className="w-16 mx-auto">Aa</div>
-    </td>
-  ),
-}
-
 ## Usage
 
 Control the placeholder color of an element using the `placeholder-{color}` utilities.
@@ -127,11 +104,3 @@ You can [customize your color palette](/docs/colors#customizing) by editing `the
     }
   }
 ```
-
-### Variants
-
-<Variants plugin="placeholderColor" />
-
-### Disabling
-
-<Disabling plugin="placeholderColor" />

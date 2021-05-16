@@ -3,35 +3,6 @@ title: "Divide Color"
 description: "Utilities for controlling the border color between elements."
 ---
 
-import plugin from 'tailwindcss/lib/plugins/divideColor'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-import { Heading } from '@/components/Heading'
-
-export const classes = {
-  plugin,
-  transformSelector: (selector) => (
-    <>
-      {selector.split('>').shift().trim().replace(/^\./, '').replace(/\\/g, '')} <span className="ml-1 text-purple-300">> * + *</span>
-    </>
-  ),
-  preview: (css, { className }) => (
-    <td className={`relative w-20 p-2 ${className}`}>
-      <div className="absolute inset-0 flex flex-col m-2">
-        <div className="flex-1" />
-        <div
-          className="flex-1 border-t"
-          style={{
-            borderColor: Array.isArray(css['border-color'])
-              ? css['border-color'][0].replace('var(--tw-divide-opacity)', '1')
-              : css['border-color'].replace('var(--tw-divide-opacity)', '1'),
-          }}
-        />
-      </div>
-    </td>
-  ),
-}
-
 ## Usage
 
 Control the border color between elements using the `divide-{color}` utilities.

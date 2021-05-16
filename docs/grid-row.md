@@ -3,15 +3,6 @@ title: "Grid Row Start / End"
 description: "Utilities for controlling how elements are sized and placed across grid rows."
 ---
 
-import gridRowPlugin from 'tailwindcss/lib/plugins/gridRow'
-import gridRowStartPlugin from 'tailwindcss/lib/plugins/gridRowStart'
-import gridRowEndPlugin from 'tailwindcss/lib/plugins/gridRowEnd'
-import { Disabling } from '@/components/Disabling'
-
-export const classes = {
-  plugin: [gridRowPlugin, gridRowStartPlugin, gridRowEndPlugin]
-}
-
 ## Spanning rows
 
 Use the `row-span-{n}` utilities to make an element span _n_ rows.
@@ -150,5 +141,3 @@ You can control which variants are generated for the grid-row utilities by modif
 Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants/).
 
 ### Disabling
-
-<Disabling plugin={['gridRow', 'gridRowStart', 'gridRowEnd']} name="grid-row" />

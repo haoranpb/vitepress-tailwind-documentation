@@ -8,25 +8,6 @@ features:
   focus: false
 ---
 
-import plugin from 'tailwindcss/lib/plugins/textColor'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-import { Heading } from '@/components/Heading'
-
-export const classes = {
-  plugin,
-  preview: (css, { className }) => (
-    <td
-      className={`text-center font-medium text-base whitespace-nowrap align-middle ${className}`}
-      style={{
-        color: Array.isArray(css['color']) ? css['color'][0] : css['color'],
-      }}
-    >
-      <div className="w-16 mx-auto">Aa</div>
-    </td>
-  ),
-}
-
 ## Usage
 
 Control the text color of an element using the `text-{color}` utilities.
@@ -142,11 +123,3 @@ You can [customize your color palette](/docs/colors#customizing) by editing `the
     }
   }
 ```
-
-### Variants
-
-<Variants plugin="textColor" />
-
-### Disabling
-
-<Disabling plugin="textColor" />

@@ -3,15 +3,6 @@ title: "Grid Column Start / End"
 description: "Utilities for controlling how elements are sized and placed across grid columns."
 ---
 
-import gridColumnPlugin from 'tailwindcss/lib/plugins/gridColumn'
-import gridColumnStartPlugin from 'tailwindcss/lib/plugins/gridColumnStart'
-import gridColumnEndPlugin from 'tailwindcss/lib/plugins/gridColumnEnd'
-import { Disabling } from '@/components/Disabling'
-
-export const classes = {
-  plugin: [gridColumnPlugin, gridColumnStartPlugin, gridColumnEndPlugin]
-}
-
 ## Spanning columns
 
 Use the `col-span-{n}` utilities to make an element span _n_ columns.
@@ -160,5 +151,3 @@ You can control which variants are generated for the grid-column utilities by mo
 Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants/).
 
 ### Disabling
-
-<Disabling plugin={['gridColumn', 'gridColumnStart', 'gridColumnEnd']} name="grid-column" />

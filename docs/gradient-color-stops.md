@@ -8,34 +8,6 @@ features:
   focus: false
 ---
 
-import plugin from 'tailwindcss/lib/plugins/gradientColorStops'
-import { Heading } from '@/components/Heading'
-import { Variants } from '@/components/Variants'
-import { Disabling } from '@/components/Disabling'
-import { TipGood, TipBad } from '@/components/Tip'
-
-export const classes = {
-  plugin,
-  transformProperties: ({ selector, properties }) => {
-    delete properties['--tw-gradient-color-stops']
-    return properties
-  },
-  preview: (css) => (
-    <td
-      className={css['background-color'] === 'transparent' ? 'bg-checkered' : undefined}
-      style={{
-        backgroundColor: ([
-          css['--tw-gradient-from'],
-          css['--tw-gradient-to'],
-          css['--tw-gradient-stops']
-        ]).filter(c => c !== undefined)[0].match(/(#[a-f0-9]+|transparent|currentColor)/i)[0],
-      }}
-    >
-      <div className="w-24" />
-    </td>
-  ),
-}
-
 ## Starting color
 
 Set the starting color of a gradient using the `from-{color}` utilities.
