@@ -3,7 +3,7 @@
   <div class="w-full mx-auto max-w-8xl lg:flex">
     <SideBar />
     <div
-      class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible overflow-hidden max-h-screen fixed"
+      class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible"
     >
       <div class="w-full flex">
         <ContentWrapper @contentUpdated="handleContentUpdate" />
