@@ -21,7 +21,7 @@
           :href="$themeConfig.repo"
           class="text-gray-400 hover:text-gray-500 transition-colors duration-200"
         >
-          <span class="sr-only">Haoranpb on GitHub</span>
+          <span class="sr-only">Repository on GitHub</span>
           <IconGitHub />
         </OutLink>
       </div>
