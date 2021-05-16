@@ -11,7 +11,7 @@
 
           <div class="flex items-center space-x-6 sm:space-x-10 ml-6 sm:ml-10">
             <a
-              href="/docs"
+              href="/docs/"
               class="text-base leading-6 font-medium text-gray-500 hover:text-gray-600 transition-colors duration-200 py-2"
             >
               <span class="sm:hidden">Docs</span>
@@ -52,7 +52,7 @@
         >
           <a
             class="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200"
-            href="/docs"
+            href="/docs/"
           >
             Get started
           </a>
