@@ -18,7 +18,7 @@
         class="lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6"
       >
         <OutLink
-          href="https://github.com/haoranpb"
+          :href="$themeConfig.repo"
           class="text-gray-400 hover:text-gray-500 transition-colors duration-200"
         >
           <span class="sr-only">Haoranpb on GitHub</span>
