@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="$themeConfig.pages[pageName].href"
+    :href="$themeConfig.pages[fileName].href"
     class="px-3 py-2 transition-colors duration-200 relative block rounded-md"
     :class="[
       isActive
@@ -8,23 +8,23 @@
         : 'hover:text-gray-900 text-gray-500',
     ]"
   >
-    <span>{{ $themeConfig.pages[pageName].title }}</span>
+    <span>{{ $themeConfig.pages[fileName].title }}</span>
   </a>
 </template>
 
 <script>
+import { getNameFromPath } from '../utils.js'
+
 export default {
   props: {
-    pageName: {
+    fileName: {
       type: String,
       required: true,
     },
   },
   computed: {
     isActive() {
-      return (
-        this.$page.relativePath.split('/').pop().split('.')[0] == this.pageName
-      )
+      return getNameFromPath(this.$page.relativePath) == this.fileName
     },
   },
 }

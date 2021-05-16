@@ -43,6 +43,7 @@
 
 <script>
 import OutLink from './components/OutLink.vue'
+import { getNameFromPath } from './utils.js'
 
 export default {
   data() {
@@ -67,7 +68,9 @@ export default {
   },
   methods: {
     getPrevNextPage() {
-      const pageIndex = this.flatPages.indexOf(this.$page.title)
+      const pageIndex = this.flatPages.indexOf(
+        getNameFromPath(this.$page.relativePath)
+      )
 
       const prevPageID = pageIndex > 0 ? this.flatPages[pageIndex - 1] : null
       const nextPageID =

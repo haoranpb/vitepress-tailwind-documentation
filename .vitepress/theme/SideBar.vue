@@ -21,9 +21,9 @@
             >
               {{ category }}
             </h5>
-            <ul v-for="pageName in collection" :key="pageName">
+            <ul v-for="fileName in collection" :key="fileName">
               <li>
-                <NavItem :pageName="pageName" />
+                <NavItem :fileName="fileName" />
               </li>
             </ul>
           </li>
