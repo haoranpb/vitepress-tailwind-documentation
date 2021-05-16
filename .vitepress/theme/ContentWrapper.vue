@@ -8,15 +8,64 @@
       </h1>
       <p class="mt-1 text-lg text-gray-500">{{ $page.description }}</p>
     </div>
+
     <Content class="prose" />
+
+    <div class="mt-16 flex leading-6 font-medium text-gray-500">
+      <a
+        v-if="prevPage"
+        :href="prevPage.href"
+        class="flex mr-8 transition-colors duration-200 hover:text-gray-900"
+      >
+        <span aria-hidden="true" class="mr-2">←</span>
+        {{ prevPage.title }}
+      </a>
+      <a
+        v-if="nextPage"
+        :href="nextPage.href"
+        class="flex text-right ml-auto transition-colors duration-200 hover:text-gray-900"
+      >
+        {{ nextPage.title }}
+        <span aria-hidden="true" class="ml-2">→</span>
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      flatPages: null,
+      prevPage: null,
+      nextPage: null,
+    }
+  },
   emits: ['contentUpdated'],
   updated() {
     this.$emit('contentUpdated')
+    this.getPrevNextPage()
+  },
+  mounted() {
+    this.flatPages = Object.values(this.$site.customData.collections)
+      .map((item) => Object.values(item))
+      .flat()
+
+    this.getPrevNextPage()
+  },
+  methods: {
+    getPrevNextPage() {
+      const pageIndex = this.flatPages.indexOf(this.$page.title)
+
+      const prevPageID = pageIndex > 0 ? this.flatPages[pageIndex - 1] : null
+      const nextPageID =
+        pageIndex < this.flatPages.length - 1
+          ? this.flatPages[pageIndex + 1]
+          : null
+
+      this.prevPage = this.$site.customData.pages[prevPageID]
+      this.nextPage = this.$site.customData.pages[nextPageID]
+    },
   },
 }
 </script>
