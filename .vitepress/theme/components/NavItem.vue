@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="$site.customData.pages[pageName].href"
+    :href="$themeConfig.pages[pageName].href"
     class="px-3 py-2 transition-colors duration-200 relative block rounded-md"
     :class="[
       isActive
@@ -8,7 +8,7 @@
         : 'hover:text-gray-900 text-gray-500',
     ]"
   >
-    <span>{{ $site.customData.pages[pageName].title }}</span>
+    <span>{{ $themeConfig.pages[pageName].title }}</span>
   </a>
 </template>
 

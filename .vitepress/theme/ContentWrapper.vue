@@ -47,7 +47,7 @@ export default {
     this.getPrevNextPage()
   },
   mounted() {
-    this.flatPages = Object.values(this.$site.customData.collections)
+    this.flatPages = Object.values(this.$themeConfig.collections)
       .map((item) => Object.values(item))
       .flat()
 
@@ -63,8 +63,8 @@ export default {
           ? this.flatPages[pageIndex + 1]
           : null
 
-      this.prevPage = this.$site.customData.pages[prevPageID]
-      this.nextPage = this.$site.customData.pages[nextPageID]
+      this.prevPage = this.$themeConfig.pages[prevPageID]
+      this.nextPage = this.$themeConfig.pages[nextPageID]
     },
   },
 }

@@ -3,7 +3,7 @@ const { fetchDocs } = require('./fetchDocs')
 module.exports = {
   title: 'Tailwind Doc Clone',
   description: 'Tailwind CSS documentation site clone with Vitepress',
-  customData: {
+  themeConfig: {
     pages: fetchDocs(),
     collections: {
       'Getting started': ['Installation'],
