@@ -1,6 +1,5 @@
-import 'tailwindcss/tailwind.css'
-import './prism.css'
-import Layout from './Layout.vue'
+import './style.css'
+import Layout from './layout/Layout.vue'
 
 export default {
   Layout,
