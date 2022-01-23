@@ -1,9 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./.vitepress/theme/**/*.vue'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./.vitepress/theme/**/*.{js,vue}'],
   theme: {
     extend: {
       colors: {
@@ -11,7 +9,7 @@ module.exports = {
         violet: colors.violet,
         fuchsia: colors.fuchsia,
         lime: colors.lime,
-        'light-blue': colors.lightBlue,
+        sky: colors.sky,
         rose: colors.rose,
         emerald: colors.emerald,
       },
@@ -60,9 +58,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
 }
