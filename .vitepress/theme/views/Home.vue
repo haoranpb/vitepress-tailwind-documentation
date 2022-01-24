@@ -1,27 +1,7 @@
 <template>
-  <header class="px-4 sm:px-6 md:px-8 h-screen">
-    <div
-      class="pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200"
-    >
-      <Logo class="text-slate-900 dark:text-white w-auto h-5" />
-      <div class="flex items-center">
-        <nav>
-          <ul class="flex items-center space-x-8">
-            <!-- TODO: switch to links -->
-            <li>Docs</li>
-            <li>Blog</li>
-          </ul>
-        </nav>
-        <div
-          class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800"
-        >
-          <!-- TODO: dark theme button -->
-          <OutLink href="github.com">
-            <IconGitHub />
-          </OutLink>
-        </div>
-      </div>
-    </div>
+  <header>
+    <Header />
+
     <div class="max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
       <h1
         class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"
@@ -55,4 +35,5 @@ import Logo from '../components/Logo.vue'
 import IconGitHub from '../icons/IconGitHub.vue'
 import OutLink from '../components/OutLink.vue'
 import HText from '../components/HighlightText.vue'
+import Header from '../layout/Header.vue'
 </script>

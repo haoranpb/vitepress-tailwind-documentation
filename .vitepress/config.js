@@ -1,6 +1,7 @@
+import { defineConfig } from 'vitepress'
 const { fetchDocs } = require('./fetchDocs')
 
-module.exports = {
+export default defineConfig({
   title: 'Tailwind CSS',
   description: 'Simplified Tailwindcss documentation site clone',
   themeConfig: {
@@ -24,4 +25,4 @@ module.exports = {
       ],
     },
   },
-}
+})
