@@ -5,8 +5,10 @@ import TableOfContent from '../layout/TableOfContent.vue'
 </script>
 
 <template>
-  <div class="max-w-7xl mx-auto">
-    <div class="sticky top-0 backdrop-blur transition-colors duration-500">
+  <div class="max-w-8xl mx-auto">
+    <div
+      class="sticky top-0 backdrop-blur transition-colors duration-500 w-full lg:border-b dark:border-slate-50/[0.06] dark:bg-slate-900/75"
+    >
       <Header class="py-4" />
     </div>
 
