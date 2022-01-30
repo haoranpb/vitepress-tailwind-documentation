@@ -6,7 +6,9 @@ import TableOfContent from '../layout/TableOfContent.vue'
 
 <template>
   <div class="max-w-7xl mx-auto">
-    <Header />
+    <div class="sticky top-0 backdrop-blur transition-colors duration-500">
+      <Header class="py-4" />
+    </div>
 
     <div class="lg:flex w-full">
       <SideBar />
