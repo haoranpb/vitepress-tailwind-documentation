@@ -3,12 +3,19 @@
     class="flex items-center justify-between text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200"
     :class="{ 'pt-6 lg:pt-8': isIndex }"
   >
-    <Logo class="h-5 w-auto text-slate-900 dark:text-white" />
+    <a :class="{ 'pl-8': !isIndex }" href="/">
+      <Logo class="h-5 w-auto text-slate-900 dark:text-white" />
+    </a>
+
     <div class="flex items-center">
       <nav>
         <ul class="flex items-center space-x-8">
           <!-- TODO: switch to links -->
-          <li>Docs</li>
+          <li>
+            <a href="docs/" class="hover:text-sky-500 dark:hover:text-sky-400">
+              Docs
+            </a>
+          </li>
           <li>Blog</li>
         </ul>
       </nav>
@@ -16,7 +23,7 @@
         class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800"
       >
         <!-- TODO: dark theme button -->
-        <OutLink href="github.com">
+        <OutLink href="https://github.com">
           <IconGitHub />
         </OutLink>
       </div>
