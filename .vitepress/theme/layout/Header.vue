@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200"
+    class="flex items-center justify-between text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200"
     :class="{ 'pt-6 lg:pt-8': isIndex }"
   >
-    <Logo class="text-slate-900 dark:text-white w-auto h-5" />
+    <Logo class="h-5 w-auto text-slate-900 dark:text-white" />
     <div class="flex items-center">
       <nav>
         <ul class="flex items-center space-x-8">
@@ -13,7 +13,7 @@
         </ul>
       </nav>
       <div
-        class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800"
+        class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800"
       >
         <!-- TODO: dark theme button -->
         <OutLink href="github.com">

@@ -5,20 +5,20 @@ import TableOfContent from '../layout/TableOfContent.vue'
 </script>
 
 <template>
-  <div class="max-w-8xl mx-auto">
+  <div class="mx-auto max-w-8xl">
     <div
-      class="sticky top-0 backdrop-blur transition-colors duration-500 w-full lg:border-b dark:border-slate-50/[0.06] dark:bg-slate-900/75"
+      class="sticky top-0 w-full backdrop-blur transition-colors duration-500 dark:border-slate-50/[0.06] dark:bg-slate-900/75 lg:border-b"
     >
       <Header class="py-4" />
     </div>
 
-    <div class="lg:flex w-full">
+    <div class="w-full lg:flex">
       <SideBar />
-      <div class="min-w-0 flex lg:static lg:max-h-full pt-10">
+      <div class="flex min-w-0 pt-10 lg:static lg:max-h-full">
         <div class="min-w-0 flex-auto px-6">
           <header>
             <h1
-              class="inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200"
+              class="inline-block text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 sm:text-3xl"
             >
               {{ $frontmatter.title }}
             </h1>

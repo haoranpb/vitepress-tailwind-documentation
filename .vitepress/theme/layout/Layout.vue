@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 px-4 sm:px-6 md:px-8 min-h-screen"
+    class="min-h-screen bg-white px-4 text-slate-500 dark:bg-slate-900 dark:text-slate-400 sm:px-6 md:px-8"
   >
     <Home v-if="isIndex" />
     <Page v-else />
