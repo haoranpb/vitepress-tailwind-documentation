@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
-const { theme } = useData()
+
+const { theme, page } = useData()
 </script>
 
 <template>
@@ -24,8 +25,15 @@ const { theme } = useData()
           >
             <li v-for="title in titles">
               <a
-                class="-ml-px block border-l border-transparent pl-4 text-slate-700 hover:border-slate-400 hover:text-slate-900 dark:text-slate-400 dark:hover:border-slate-500 dark:hover:text-slate-300"
-                >{{ title }}
+                :href="theme.pages[title].href"
+                class="-ml-px block border-l pl-4 text-slate-700"
+                :class="[
+                  page.relativePath.split('/').pop().split('.')[0] === title
+                    ? 'border-current font-semibold text-sky-500 dark:text-sky-400'
+                    : 'border-transparent hover:border-slate-400 hover:text-slate-900 dark:text-slate-400 dark:hover:border-slate-500 dark:hover:text-slate-300',
+                ]"
+              >
+                {{ title }}
               </a>
             </li>
           </ul>
