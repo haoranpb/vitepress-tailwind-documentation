@@ -15,7 +15,7 @@ import TableOfContent from '../layout/TableOfContent.vue'
     <div class="lg:flex w-full">
       <SideBar />
       <div class="min-w-0 flex lg:static lg:max-h-full pt-10">
-        <div class="min-w-0 flex-auto">
+        <div class="min-w-0 flex-auto px-6">
           <header>
             <h1
               class="inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200"

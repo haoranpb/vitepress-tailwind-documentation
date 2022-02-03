@@ -5,7 +5,7 @@ const { theme } = useData()
 
 <template>
   <div
-    class="fixed inset-0 flex-none h-full w-full lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block lg:static hidden"
+    class="fixed inset-0 flex-none h-full w-full lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block lg:static hidden pb-10 px-8"
   >
     <nav class="lg:text-sm lg:leading-6">
       <!-- TODO: search box -->
